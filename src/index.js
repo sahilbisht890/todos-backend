@@ -7,7 +7,8 @@ const sequelize = require("./connection");
 const userRouter = require("./routes/userRoutes");
 
 
-express.json();
+app.use(express.json());
+
 
 sequelize
   .sync({ force: false })
