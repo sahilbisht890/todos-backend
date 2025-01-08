@@ -1,12 +1,13 @@
 const express = require("express");
 const app = express();
+const cookieParser = require('cookie-parser')
 const dotenv = require("dotenv");
 dotenv.config();
 
 const sequelize = require("./connection");
 const userRouter = require("./routes/userRoutes");
 
-
+app.use(cookieParser());
 app.use(express.json());
 
 
